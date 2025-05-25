@@ -19,12 +19,37 @@ abstract class Employee {
 }
 
 class Engineer extends Employee {
+    private double basicSalary;
+    private double hra, da, ta, pf, tax, netSalary;
+
     public Engineer(String name) {
         super(name);
     }
 
+    @Override
     public void processSalary() {
         System.out.println(name + ": Process Salary for Engineer");
+
+        hra = 0.20 * basicSalary;
+        da = 0.10 * basicSalary;
+        ta = 0.05 * basicSalary;
+
+        pf = 0.12 * basicSalary;
+        tax = 0.05 * basicSalary;
+
+        netSalary = basicSalary + hra + da + ta - pf - tax;
+
+        display();
+    }
+    
+    public void display(){
+        System.out.printf("Basic Salary: ₹%.2f%n", basicSalary);
+        System.out.printf("HRA (20%%): ₹%.2f%n", hra);
+        System.out.printf("DA (10%%): ₹%.2f%n", da);
+        System.out.printf("TA (5%%): ₹%.2f%n", ta);
+        System.out.printf("PF Deduction (12%%): ₹%.2f%n", pf);
+        System.out.printf("Tax Deduction (5%%): ₹%.2f%n", tax);
+        System.out.printf("Net Salary: ₹%.2f%n", netSalary);
     }
 }
 

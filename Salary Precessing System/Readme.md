@@ -12,7 +12,7 @@ This salary processing application is designed to manage the salary processing f
 
 ## Implementation
 
-The application is implemented in C++ and consists of the following classes:
+The application is implemented in Java and consists of the following classes:
 
 - **Employee:** Abstract base class for all types of employees. It defines avirtual function ProcessSalary() which must be implemented by derivedclasses. It also maintains a static vector staffs to keep track of allemployees.
 
@@ -58,11 +58,11 @@ The `staffs` vector in the Employee class is declared as static, allowing it to 
 
 #### Class Diagram – OOP Structure
 
-![Class Diagram](images/Class_Diagram.png)
+![Class Diagram](Images/Class_Diagram.png)
 
 #### Sequence Diagram – Method Call/Interaction Order
 
-![Sequence Diagram](images/Sequence_Diagram.png)
+![Sequence Diagram](Images/Sequence_Diagram.png)
 
 ## **ADD THIS TO RESUME**
 
